@@ -1,0 +1,13 @@
+# macOS clutter
+.DS_Store
+
+# Windows clutter
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node (only if you ever add build tools)
+node_modules/

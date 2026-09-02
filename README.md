@@ -4,6 +4,8 @@ A small, complete website you can copy, edit, and publish for free on
 GitHub Pages. It is deliberately plain: three files, no build tools, no
 frameworks, nothing to install.
 
+**Live example:** https://dannewoo.github.io/github-dataviz-course-example/
+
 **What's in the box**
 
 ```
@@ -20,15 +22,16 @@ README.md         this file
 ## Table of contents
 
 1. [What GitHub Pages is (and how it differs from Glitch)](#1-what-github-pages-is)
-2. [Publish your site — the browser-only way](#2-publish-your-site--browser-only)
-3. [Publish your site — with GitHub Desktop](#3-publish-your-site--github-desktop)
-4. [Your site's address](#4-your-sites-address)
-5. [The everyday edit-and-publish loop](#5-the-everyday-edit-and-publish-loop)
-6. [Working on your site locally](#6-working-on-your-site-locally)
-7. [Rules that will bite you](#7-rules-that-will-bite-you)
-8. [Troubleshooting](#8-troubleshooting)
-9. [What to try in this project](#9-what-to-try-in-this-project)
-10. [Vocabulary](#10-vocabulary)
+2. [Make your own copy of this project](#2-make-your-own-copy-of-this-project)
+3. [Turn on GitHub Pages](#3-turn-on-github-pages)
+4. [Get the code onto your computer](#4-get-the-code-onto-your-computer)
+5. [Your site's address](#5-your-sites-address)
+6. [The everyday edit-and-publish loop](#6-the-everyday-edit-and-publish-loop)
+7. [Working on your site locally](#7-working-on-your-site-locally)
+8. [Rules that will bite you](#8-rules-that-will-bite-you)
+9. [Troubleshooting](#9-troubleshooting)
+10. [What to try in this project](#10-what-to-try-in-this-project)
+11. [Vocabulary](#11-vocabulary)
 
 ---
 
@@ -63,72 +66,138 @@ The two changes you'll feel most:
 
 ---
 
-## 2. Publish your site — browser only
+## 2. Make your own copy of this project
 
-No installation, no command line. Good for your first time.
+You are going to end up with **your own repository**, under **your own
+GitHub account**, that starts life as a copy of this one. From that
+moment on it is yours — your edits, your commits, your live URL. Nothing
+you do affects this original, and nothing I do to this original changes
+your copy.
 
-1. **Get a GitHub account** at [github.com](https://github.com) if you
-   don't have one. Use a username you won't mind appearing in your
-   portfolio URL — it becomes part of your site's address.
+First, if you don't have one, [create a GitHub account](https://github.com/signup).
+Pick a username you won't mind appearing in your portfolio URL — it
+becomes part of your site's address.
 
-2. **Create a repository.** Click the **+** in the top-right of GitHub →
-   **New repository**.
-   - **Repository name:** `dataviz-starter` (lowercase, no spaces —
-     hyphens are fine)
-   - **Public** — GitHub Pages requires this on free accounts
-   - Check **Add a README file**
-   - Click **Create repository**
+### Option A — Use this template (do this one)
 
-3. **Upload these files.** On the repository page, click
-   **Add file → Upload files**. Drag in `index.html`, the `css` folder,
-   and the `js` folder. Scroll down and click **Commit changes**.
+1. Go to the project on GitHub:
+   **https://github.com/dannewoo/github-dataviz-course-example**
 
-   > Dragging the *folders* preserves the `css/` and `js/` structure —
-   > that matters, because `index.html` looks for `css/style.css` at
-   > exactly that path.
+2. Click the green **Use this template** button near the top right, then
+   choose **Create a new repository**.
 
-4. **Turn on Pages.** Go to the repository's **Settings** tab →
-   **Pages** in the left sidebar.
-   - Under **Source**, choose **Deploy from a branch**
-   - **Branch:** `main`, folder: `/ (root)`
-   - Click **Save**
+3. Fill in the new repository:
+   - **Repository name:** something lowercase with hyphens, like
+     `dataviz-week-01` or `my-first-site`. No spaces, no capitals.
+   - **Public** — GitHub Pages requires this on free accounts.
+   - Leave **Include all branches** unchecked.
 
-5. **Wait about a minute**, then reload that Settings → Pages screen.
-   A green banner appears with your live URL. Click it.
+4. Click **Create repository**.
 
-That's it. Your site is on the internet.
+After a few seconds you're looking at your own copy, with all the files
+already in place. It has a clean history that starts with your commit —
+none of mine.
+
+> **Don't see a "Use this template" button?** Then the template switch
+> isn't on yet — tell me and I'll flip it. In the meantime, use Option B.
+
+### Option B — Download the ZIP
+
+Works anywhere, and it's how you'd copy any project on GitHub.
+
+1. On the project page, click the green **Code** button →
+   **Download ZIP**.
+2. Unzip it. Rename the folder to your project's name.
+3. **Reveal hidden files before you go any further.** The `.gitignore`
+   and `.nojekyll` files start with a dot, so your computer hides them
+   by default — and if you can't see them, you'll leave them behind.
+   - **Mac:** press `Cmd + Shift + .` in Finder
+   - **Windows:** File Explorer → **View** → check **Hidden items**
+4. Create the repository and push the folder using GitHub Desktop
+   (section 4 below), or upload the files through
+   **Add file → Upload files** on a new empty GitHub repository.
+
+### What about "Fork"?
+
+You'll see a **Fork** button too. Forking also makes a copy, but it's the
+wrong tool here for two reasons: your copy stays permanently labeled
+"forked from dannewoo/…", and **GitHub only lets you fork a given
+repository once per account** — so you couldn't use this starter again
+for a second assignment. Templates have neither limitation. Use the
+template.
+
+### Starting a project that isn't this one
+
+For later assignments you'll want an empty repository rather than a copy
+of this starter. Same idea, fewer steps:
+
+1. Click the **+** in the top-right of GitHub → **New repository**.
+2. Name it, set it to **Public**, check **Add a README file**, create it.
+3. Add your files — either **Add file → Upload files** in the browser,
+   or by cloning it first (section 4) and working on your computer.
+4. Turn on Pages, exactly as described next.
 
 ---
 
-## 3. Publish your site — GitHub Desktop
+## 3. Turn on GitHub Pages
 
-Once you're editing files on your own computer, use
-[GitHub Desktop](https://desktop.github.com) (free, Mac and Windows).
-It's a visual app — you never have to type a Git command.
+A brand-new copy is not published yet. This is a one-time switch per
+repository.
+
+1. In **your** repository (not mine), click the **Settings** tab.
+2. Choose **Pages** in the left sidebar.
+3. Under **Source**, choose **Deploy from a branch**.
+4. Set **Branch** to `main` and the folder to **`/ (root)`**.
+5. Click **Save**.
+
+Wait about a minute, then reload that same Settings → Pages screen. A
+green banner appears with your live URL. Click it.
+
+Your site is on the internet. Send yourself the link.
+
+> The first publish takes a minute or two. Later updates usually appear
+> about 30 seconds after you push. You can watch a deploy happen in the
+> repository's **Actions** tab.
+
+---
+
+## 4. Get the code onto your computer
+
+You can edit files directly on GitHub.com — click any file, then the
+pencil icon — and for a one-line fix that's genuinely the fastest route.
+But for real work you want the project on your own machine, in your own
+editor.
+
+The easiest way is [GitHub Desktop](https://desktop.github.com) (free,
+Mac and Windows). It's a visual app — you never have to type a Git
+command.
 
 1. Install GitHub Desktop and sign in to your GitHub account.
-2. **File → New Repository.** Name it, choose where to save it on your
-   computer, and create it.
-3. Put `index.html`, `css/`, and `js/` inside that new folder using
-   Finder or File Explorer.
-4. Back in GitHub Desktop, your files appear in the left panel. Type a
-   short **Summary** (e.g. "Add starter site") and click
-   **Commit to main**.
-5. Click **Publish repository** at the top. **Uncheck "Keep this code
-   private."**
-6. Turn on Pages exactly as in step 4 above.
+2. **File → Clone Repository → GitHub.com**.
+3. Pick your repository from the list, choose where to save it on your
+   computer, and click **Clone**.
+4. Click **Open in Visual Studio Code** (or open the folder in whatever
+   editor you use) and start editing.
+
+**In the terminal**, if you prefer — replace the URL with your own
+repository's:
+
+```bash
+git clone https://github.com/YOURNAME/dataviz-week-01.git
+cd dataviz-week-01
+```
 
 ---
 
-## 4. Your site's address
+## 5. Your site's address
 
 The URL depends on what you named the repository.
 
 **Project site** — the normal case:
 
 ```
-Repository:  dataviz-starter
-Live URL:    https://YOURNAME.github.io/dataviz-starter/
+Repository:  dataviz-week-01
+Live URL:    https://YOURNAME.github.io/dataviz-week-01/
 ```
 
 **User site** — one per account, no folder in the URL. Name the
@@ -144,7 +213,7 @@ portfolio landing page, if you want one.
 
 ---
 
-## 5. The everyday edit-and-publish loop
+## 6. The everyday edit-and-publish loop
 
 Every change to your live site follows the same three steps.
 
@@ -172,7 +241,7 @@ can see of your work.
 
 ---
 
-## 6. Working on your site locally
+## 7. Working on your site locally
 
 **To preview:** double-click `index.html` and it opens in your browser.
 For this project, that works fine.
@@ -204,7 +273,7 @@ Terminal to stop it.
 
 ---
 
-## 7. Rules that will bite you
+## 8. Rules that will bite you
 
 These cause almost every "it worked on my computer" problem.
 
@@ -256,7 +325,7 @@ site slow and your repository bloated forever.
 
 ---
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 | What you see | What's usually wrong |
 |---|---|
@@ -266,8 +335,9 @@ site slow and your repository bloated forever.
 | **Works locally, broken online** | Capitalization, nine times out of ten. Compare the filename in your folder to the one in your HTML, character by character. |
 | **Old version still showing** | Browser cache. Hard-refresh: `Cmd+Shift+R` (Mac) or `Ctrl+Shift+R` (Windows). Or check the **Actions** tab — the deploy may still be running. |
 | **Nothing interactive works** | A JavaScript error. Right-click → **Inspect** → **Console** tab. Read the first red error and the line number it names. |
-| **CORS error loading a data file** | You opened the HTML file directly. Use Live Server — see section 6. |
+| **CORS error loading a data file** | You opened the HTML file directly. Use Live Server — see section 7. |
 | **Pushed but nothing changed** | The commit may not have pushed. Check GitHub.com — if your change isn't visible there, it isn't live anywhere. |
+| **Your edits show up on my copy, not yours** | You're editing the original repository instead of your own. Check the name at the top of the page — it should say `YOURNAME / your-repo`. Go back to section 2 and make your own copy. |
 
 **Your two best debugging tools**, in order:
 
@@ -280,7 +350,7 @@ site slow and your repository bloated forever.
 
 ---
 
-## 9. What to try in this project
+## 10. What to try in this project
 
 Make these edits, push them, and watch your live site change.
 
@@ -309,18 +379,20 @@ Make these edits, push them, and watch your live site change.
 
 ---
 
-## 10. Vocabulary
+## 11. Vocabulary
 
 | Term | What it means |
 |---|---|
 | **Repository (repo)** | A project folder that Git tracks. Your website lives in one. |
+| **Template** | A repository marked as a starting point. "Use this template" makes you an independent copy with a clean history. |
+| **Fork** | A copy of someone else's repository that stays linked to the original. Limited to one per account, per repository. |
+| **Clone** | Downloading a repository to your computer, with its history. |
 | **Commit** | A saved snapshot of your changes, with a message describing them. |
 | **Push** | Sending your commits from your computer up to GitHub. |
 | **Pull** | Bringing changes from GitHub down to your computer. |
 | **Branch** | A parallel version of your project. You'll live on `main`. |
 | **`main`** | The default branch. This is what GitHub Pages publishes. |
-| **Clone** | Downloading a repository to your computer, with its history. |
-| **Fork** | Your own copy of someone else's repository, under your account. |
+| **`origin`** | Git's nickname for your repository's home on GitHub. |
 | **Static site** | A site made only of files sent to the browser as-is. |
 | **`.nojekyll`** | An empty file that tells Pages to serve your files untouched. Without it, folders starting with `_` are ignored. |
 
